@@ -15,13 +15,17 @@
 			
 			session.setAttribute("memberId", memberId);
 			session.setAttribute("memberPw", memberPw);
+			session.setAttribute("ValidMem", "Yes");
 			
 			out.println("로그인 성공!<br>");
-			out.println(memberId + "님 반갑습니다.");
+			out.println(memberId + "님 반갑습니다.<br>");
 		}
 		else{
 			out.println("로그인 실패!<br>");
 		}
 	%>
+	
+	<a href="sessionCheck.jsp">세션값 확인 페이지로 이동</a><br>
+	<a href="sessionCheckAll.jsp">모든 세션 정보 확인하기로 이동</a>
 </body>
 </html>
